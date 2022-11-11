@@ -14,4 +14,4 @@ Hilt - Google recommended dependency injection library. it frees you from writin
 
 Gson - Gson library provides a powerful framework for converting between JSON strings and Java objects. This library helps to avoid needing to write boilerplate code to parse JSON responses yourself.
 
-The app only shows some of the movies details. Other details such as actors, reviews could not be implemented due to time constraint.
+The app only shows some of the movies details. Other details such as actors, reviews,companies involved in production and features like search could not be implemented due to time constraint.
