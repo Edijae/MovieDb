@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.samuel.movie.ui.fragments.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_MovieFragment"
+            app:destination="@id/fragmentMovie" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMovie"
+        android:name="com.samuel.movie.ui.fragments.MovieFragment"
+        android:label="movie_fragment"
+        tools:layout="@layout/fragment_movie">
+
+        <action
+            android:id="@+id/action_ImageFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+
+    </fragment>
+</navigation>

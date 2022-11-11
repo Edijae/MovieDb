@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="map">Map</string>
+    <string name="no_movies">Failed to load movies. Please try again</string>
+    <string name="failed">Failed to fetch movies. Please make sure you have an active internet connection and try again.</string>
+
+</resources>

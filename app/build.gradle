@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+    id "androidx.navigation.safeargs.kotlin"
+}
+
+android {
+    namespace 'com.samuel.movie'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.samuel.movie"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:latest.release'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.gms:play-services-maps:latest.release'
+    implementation 'com.google.dagger:hilt-android:latest.release'
+    implementation "androidx.paging:paging-runtime-ktx:latest.release"
+    implementation 'androidx.navigation:navigation-fragment-ktx:latest.release'
+    implementation 'androidx.navigation:navigation-ui-ktx:latest.release'
+
+    //glide - Best image loading library in android
+    implementation 'com.github.bumptech.glide:glide:latest.release'
+    kapt 'com.github.bumptech.glide:compiler:latest.release'
+    //
+    implementation 'androidx.activity:activity-ktx:latest.release'
+    implementation project(":data")
+    implementation 'androidx.cardview:cardview:1.0.0'
+    kapt 'com.google.dagger:hilt-android-compiler:latest.release'
+    //
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:latest.release'
+    androidTestImplementation('androidx.test:runner:latest.release')
+    androidTestImplementation('androidx.test:rules:latest.release')
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:latest.release'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.4.0'
+    debugImplementation("androidx.fragment:fragment-testing:latest.release")
+}
